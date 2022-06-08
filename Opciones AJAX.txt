@@ -1,0 +1,23 @@
+https://reqres.in/
+
+-- JQUERY
+$.ajax({
+    url: "https://reqres.in/api/users",
+    type: "POST",
+    data: {
+        name: "paul rudd",
+        movies: ["I Love You Man", "Role Models"]
+    },
+    success: function(response){
+        console.log(response);
+    }
+});
+
+--- NATIVO
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://reqres.in/api/products/3", true);
+xhr.onload = function(){
+    console.log(xhr.responseText);
+};
+xhr.send();
